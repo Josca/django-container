@@ -11,9 +11,7 @@ class Job(TestCase):
         Sample.objects.all().delete()
 
     def test_1_create(self):
-
         Sample.objects.create(timestamp=datetime.datetime.now(tz=pytz.UTC), value=1)
-
         self.assertEqual(1, len(Sample.objects.all()))
 
     def test_2_json(self):
