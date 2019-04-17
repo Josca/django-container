@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  test:
+    build: .
+    environment:
+      DJANGO_SETTINGS_MODULE: django_server.settings
+    command: bash -c "cd /app/tests && TEST=1 pytest -v --color=yes"

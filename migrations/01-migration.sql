@@ -1,0 +1,4 @@
+CREATE DATABASE app;
+CREATE USER 'app'@'localhost' IDENTIFIED BY 'passwd';
+GRANT ALL ON *.* to app@'%' IDENTIFIED BY 'passwd';
+FLUSH PRIVILEGES;
